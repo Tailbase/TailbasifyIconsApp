@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "d09d1004deee9ef932d91e1d55cb306a"
+name = "icons-app"
+handle = "icons-app"
+application_url = "https://without-classroom-unit-tear.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_files, write_products"
+
+[auth]
+redirect_urls = ["https://without-classroom-unit-tear.trycloudflare.com/auth/callback", "https://without-classroom-unit-tear.trycloudflare.com/auth/shopify/callback", "https://without-classroom-unit-tear.trycloudflare.com/api/auth/callback"]
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-04"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[pos]
+embedded = false

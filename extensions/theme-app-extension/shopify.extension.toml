@@ -1,0 +1,4 @@
+# Shopify Theme App Extension configuration
+name = "Custom Icons Block"
+handle = "custom-icons-block"
+type = "theme"

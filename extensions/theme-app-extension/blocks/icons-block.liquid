@@ -1,0 +1,81 @@
+{%- comment -%}
+	Product Icons Example Block
+	Éléments clés du matelas:
+{%- endcomment -%}
+{% assign icons_viewbag = shop.metafields.custom.store_icon %}
+{% assign first_icon = icons_viewbag.value.iconsBag | first %}
+{% if first_icon %}
+	<div id="custom-icons-block">
+		<label class="product-form__info-title text--strong">
+			{{ block.settings.block_title }}
+		</label>
+		<p>{{ block.settings.block_description }}</p>
+		<div class="custom-icons-block-content">
+			<img src="{{ first_icon.url }}" alt="{{ first_icon.title }}" title="{{ first_icon.title }}" width="100" height="100" />
+			<div class="custom-icons-block-text">
+				<span class="custom-icons-block-title">{{ first_icon.title }}</span>
+				<span class="custom-icons-block-description">{{ first_icon.description }}</span>
+			</div>
+		</div>
+		<p class="product-tag">productTag : {{ first_icon.productTag }}</p>
+	</div>
+{% endif %}
+
+{% style %}
+	#custom-icons-block {
+		border: 1px solid #757575;
+		border-radius: 7px;
+		margin: 25px auto;
+		padding: 15px;
+	}
+	#custom-icons-block .custom-icons-block-content {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+	}
+	#custom-icons-block .custom-icons-block-content img {
+		max-width: 70px;
+		max-height: 70px;
+		height: auto;
+		width: auto;
+		display: block;
+	}
+	#custom-icons-block .custom-icons-block-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	#custom-icons-block .custom-icons-block-title {
+		line-height: 1.2;
+		font-weight: 500;
+		display: block;
+	}
+	#custom-icons-block .custom-icons-block-description {
+		line-height: 1.2;
+		display: block;
+	}
+	#custom-icons-block .product-tag {
+		font-size: 0.8rem;
+		color: #666;
+		margin-top: 0.5rem;
+	}
+{% endstyle %}
+
+{% schema %}
+{
+	"name": "Custom Icons Block",
+	"target": "section",
+	"settings": [
+		{
+			"type": "text",
+			"id": "block_title",
+			"label": "Custom Icons Block Title"
+		},
+		{
+			"type": "text",
+			"id": "block_description",
+			"label": "Description"
+		}
+	]
+}
+{% endschema %}
