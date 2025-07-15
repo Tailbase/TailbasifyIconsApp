@@ -1,0 +1,11 @@
+{
+  "icons_block": {
+    "name": "Custom Icons Block",
+    "settings": {
+      "heading": {
+        "label": "Heading",
+        "info": "Optional heading for the icons section"
+      }
+    }
+  }
+}
