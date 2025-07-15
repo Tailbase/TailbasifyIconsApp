@@ -19,9 +19,9 @@ export default function App() {
   return (
     <div className={styles.index}>
       <div className={styles.content}>
-        <h1 className={styles.heading}>A short heading about [your app]</h1>
+        <h1 className={styles.heading}>Tailbasify Icons App</h1>
         <p className={styles.text}>
-          A tagline about [your app] that describes your value proposition.
+          Easily manage and display custom product icons in your Shopify store.
         </p>
         {showForm && (
           <Form className={styles.form} method="post" action="/auth/login">
@@ -37,16 +37,13 @@ export default function App() {
         )}
         <ul className={styles.list}>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Icon Upload</strong>. Upload custom icons and store them directly in your Shopify admin with titles and descriptions.
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Theme Integration</strong>. Display your uploaded icons seamlessly in your storefront using our theme extension blocks.
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Easy Management</strong>. Simple interface to manage your store icons and organize them by product categories.
           </li>
         </ul>
       </div>
