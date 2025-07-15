@@ -3,7 +3,7 @@
 client_id = "d09d1004deee9ef932d91e1d55cb306a"
 name = "icons-app"
 handle = "icons-app"
-application_url = "https://without-classroom-unit-tear.trycloudflare.com"
+application_url = "https://mail-compile-owen-textbook.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,7 +11,7 @@ embedded = true
 scopes = "write_files, write_products"
 
 [auth]
-redirect_urls = ["https://without-classroom-unit-tear.trycloudflare.com/auth/callback", "https://without-classroom-unit-tear.trycloudflare.com/auth/shopify/callback", "https://without-classroom-unit-tear.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://mail-compile-owen-textbook.trycloudflare.com/auth/callback", "https://mail-compile-owen-textbook.trycloudflare.com/auth/shopify/callback", "https://mail-compile-owen-textbook.trycloudflare.com/api/auth/callback"]
 
 [build]
 include_config_on_deploy = true

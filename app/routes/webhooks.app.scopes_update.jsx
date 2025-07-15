@@ -1,5 +1,4 @@
 import { authenticate } from "../shopify.server";
-import db from "../db.server";
 
 export const action = async ({ request }) => {
   const { payload, session, topic, shop } = await authenticate.webhook(request);
@@ -7,15 +6,9 @@ export const action = async ({ request }) => {
   console.log(`Received ${topic} webhook for ${shop}`);
   const current = payload.current;
 
+  // Log scope changes since we're not using a database
   if (session) {
-    await db.session.update({
-      where: {
-        id: session.id,
-      },
-      data: {
-        scope: current.toString(),
-      },
-    });
+    console.log(`Session ${session.id} scopes updated to: ${current.toString()}`);
   }
 
   return new Response();
