@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "d09d1004deee9ef932d91e1d55cb306a"
+client_id = "03a91f06ac17687727015222c89e9a54"
 name = "Icons App"
 handle = "icons-app"
 application_url = "https://tailbasify-icons-app.vercel.app"
